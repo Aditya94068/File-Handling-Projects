@@ -32,6 +32,10 @@ def add_student():
       if st['student_id'] == stud_id:
          print('ID already Exists')
          return
+   for st in data:
+      if st['email_id'] == email:
+         print('Duplicate email')
+         return
    d = {
       'name' : name,
       'student_id' : stud_id,
@@ -59,7 +63,15 @@ def update_student():
          st['name'] = input("Enter a name :")
          st['stud_age'] = int(input("Enter a age:"))
          st['stud_marks'] = int(input('Enter a marks :'))
-         st['email_id'] = input("Enter email id :")
+         email = input("Enter the email :")
+         for s in student:
+            if s['email_id'] == email and s['student_id'] != st_id:
+               print('Duplicate email')
+               return
+         if validate_email(email):
+            st['email_id'] = email
+         else:
+            print("Invalid email")
    if found == False: 
       print("Student Not Found") 
    with open('student.json','w') as f:
