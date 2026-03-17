@@ -1,16 +1,1 @@
-[
-    {
-        "name": "Aditya Vaishnav",
-        "student_id": 12345,
-        "stud_age": 21,
-        "stud_marks": 87,
-        "email_id": "adityavaishnav148@gmail.com"
-    },
-    {
-        "name": "Sumit Vaishnav",
-        "student_id": 4567,
-        "stud_age": 24,
-        "stud_marks": 78,
-        "email_id": "sumitvaishnav@gmail.com"
-    }
-]
+[]
