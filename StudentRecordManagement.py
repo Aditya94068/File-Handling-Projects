@@ -43,8 +43,6 @@ def add_student():
       'stud_marks' : stud_marks,
       'email_id' : email
     }
-   # with open('student.json','r') as f:
-   #    data = json.load(f)
    data.append(d)
    with open('student.json','w') as f:
       json.dump(data,f,indent=4)
