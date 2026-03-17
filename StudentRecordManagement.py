@@ -39,13 +39,32 @@ def view_student():
 def file_clear():
    with open('student.json','w') as f:
       json.dump([],f)
+def delete_student():
+   with open('student.json','r') as f:
+      student = json.load(f)
+   id = int(input("Enter the id :"))
+   new_list = []
+   found = False
+   for st in student:
+      if st['student_id'] != id:
+         new_list.append(st)
+      else:
+         found = True
+   if(found):
+      print("Student deleted successfully")
+   else:
+      print("Student not Found")
+   with open('student.json','w') as f:
+      json.dump(new_list,f)
+         
 while True:
    print("""
    1.Add Student
    2.Update Student
    3.View Student
    4.File Clear
-   5.exit
+   5.Delete Student
+   6.exit
    """)
    choice = input("Enter your Choice :")
    if choice == '1':
@@ -56,5 +75,7 @@ while True:
       view_student()
    elif choice == '4':
       file_clear()
+   elif choice == '5':
+      delete_student()
    else:
       break
