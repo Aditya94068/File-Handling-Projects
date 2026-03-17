@@ -1,14 +1,36 @@
 import json
+def validate_email(email):
+   required_domain = ['.com','.org','.edu','.net','.in']
+   if ' ' in email:
+      return False
+   if email.count('@') !=1:
+      return False
+   username , domain = email.split('@')
+   if len(username) == 0:
+      return  False
+   if '.' not in email:
+      return False
+   if not any(email.endswith(i) for i in required_domain):
+      return False
+   if not username[0].isalnum() or not username[-1].isalnum():
+      return False
+   return True
+
 def add_student():
    name = input("Enter a name of the student :")
    stud_id = int(input("Enter a student id :"))
    stud_age = int(input("Enter a student age :"))
    stud_marks = int(input("Enter the student marks :"))
+   email = input("Enter the email :")
+   if not validate_email(email):
+      print("Invalid email")
+      return
    d = {
       'name' : name,
       'student_id' : stud_id,
       'stud_age' : stud_age,
-      'stud_marks' : stud_marks
+      'stud_marks' : stud_marks,
+      'email_id' : email
     }
    with open('student.json','r') as f:
       data = json.load(f)

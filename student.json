@@ -1,1 +1,16 @@
-[{"name": "Aditya Vaishnav", "student_id": 12345, "stud_age": "21", "stud_marks": "98"}]
+[
+    {
+        "name": "Aditya",
+        "student_id": 123456,
+        "stud_age": 21,
+        "stud_marks": 78,
+        "email_id": "adityavaishnav633@gmail.com"
+    },
+    {
+        "name": "Sumit Vaishnav",
+        "student_id": 12345678,
+        "stud_age": 24,
+        "stud_marks": 57,
+        "email_id": "sumit@gmail.com"
+    }
+]
