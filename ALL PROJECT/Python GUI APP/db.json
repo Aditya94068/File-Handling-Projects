@@ -1,0 +1,20 @@
+{
+    "aditya@gmail.com": [
+        "aditya ",
+        "123345"
+    ],
+    "sumit@gmail.com": [
+        "sumit",
+        "12344"
+    ],
+    "nita@gmail.com": [
+        "nita",
+        "nita@1234"
+    ],
+    "sunil@gmail.com": [
+        {
+            "name": "sunil",
+            "password ": "123456"
+        }
+    ]
+}
